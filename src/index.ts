@@ -6,13 +6,13 @@ import { Client, Collection, GatewayIntentBits } from 'discord.js'
 dotenv.config()
 
 const client = new Client(
-	{ 
+	{
 		intents: [
 			GatewayIntentBits.Guilds,
 			GatewayIntentBits.GuildVoiceStates
-		] 
+		]
 	}
-) as (Client & {commands: Collection<any, any>})
+) as (Client & { commands: Collection<any, any> })
 
 const eventsPath = path.join(__dirname, 'events');
 const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.js'));
