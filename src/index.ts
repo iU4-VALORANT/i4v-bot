@@ -9,7 +9,8 @@ const client = new Client(
 	{
 		intents: [
 			GatewayIntentBits.Guilds,
-			GatewayIntentBits.GuildVoiceStates
+			GatewayIntentBits.GuildVoiceStates,
+			GatewayIntentBits.GuildMembers
 		]
 	}
 ) as (Client & { commands: Collection<any, any> })
